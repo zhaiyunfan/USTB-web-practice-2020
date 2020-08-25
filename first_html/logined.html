@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<hl>登陆成功</hl>
+		<div>
+			欢迎您:
+		</div>
+		<div id = "name">			
+		</div>
+		<div >
+			您的密码是:
+		</div>
+		<div id = "word">			
+		</div>
+		<script>
+			user = JSON.parse(localStorage.getItem("user"));
+			document.getElementById("name").innerHTML=user.username;
+			document.getElementById("word").innerHTML=user.password;		
+			
+			//var username = window.localStorage.getItem("username");
+			//var password = window.localStorage.getItem("password");
+			/*document.write("<br/>")
+			document.write("欢迎您:");
+			document.write(user.username);
+			document.write(",您的密码为:");
+			document.write(user.password);*/
+		</script>
+	</body>
+</html>

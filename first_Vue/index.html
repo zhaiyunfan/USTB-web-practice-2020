@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style>
+		#app{
+			width: 200px;
+			height: auto;
+			margin: 0px auto;
+		}
+		
+		#top{
+			width: 100%;
+			background: lightblue;
+			text-align: center;
+			padding: 5px;
+		}
+		
+		#sub{
+			width: 100%;
+			background: antiquewhite;
+			text-align: center;
+			padding: 5px;
+		}
+		
+	</style>
+
+	<body style="background-color: aliceblue;">
+		<div >
+			<select id="sel" @change="selChange()">
+			
+				<option value="beijing" id="beijing" selected="selected">北京</option>
+			
+				<option value="tianjin" id="tianjin">天津</option>
+			
+				<option value="hebei" id="hebei">河北</option>
+			
+			</select>
+		</div>
+		
+		<div id="beijingSub" v-show="seenB">
+			<select id="selB" >
+			
+				<option value="朝阳">朝阳</option>
+			
+				<option value="海淀">海淀</option>
+			
+				<option value="东城">东城</option>
+			
+			</select>
+		</div>
+		
+		<div id="tianjinSub" v-show="seenT">
+			<select id="selT">
+			
+				<option value="和平">和平</option>
+			
+				<option value="河东">河东</option>
+			
+				<option value="河西">河西</option>
+			
+			</select>
+		</div>
+		
+		<div id="hebeiSub" v-show="seenH">
+			<select id="selH" >
+			
+				<option value="石家庄">石家庄</option>
+			
+				<option value="保定">保定</option>
+			
+				<option value="唐山">唐山</option>
+			
+			</select>
+		</div>
+
+		<input type="button" value="获取户籍" onclick="myPrint()">
+		<script>
+			var vm = new Vue({
+				el:"#sel",
+				methods:{
+					selChange(){
+						switch(document.getElementById("sel").value) {
+						     case "beijing":
+						        vmb.seenB = true;
+								vmt.seenT = false;
+								vmh.seenH = false;
+						        break;
+						     case "tianjin":
+						        vmb.seenB = false;
+						        vmt.seenT = true;
+						        vmh.seenH = false;
+						        break;
+						     case "hebei":
+								vmb.seenB = false;
+								vmt.seenT = false;
+								vmh.seenH = true;
+								break;
+							default:
+								vmb.seenB = true;
+								vmt.seenT = false;
+								vmh.seenH = false;							        
+							} 
+						}
+				}
+				
+			})
+			var vmb = new Vue({
+				el:'#beijingSub',
+				data:{
+					seenB:true
+				}
+			})
+			var vmt = new Vue({
+				el:'#tianjinSub',
+				data:{
+					seenT:false
+				}
+			})
+			var vmh = new Vue({
+				el:'#hebeiSub',
+				data:{
+					seenH:false
+				}
+			})
+			function myPrint(){
+				switch(document.getElementById("sel").value) {
+				     case "beijing":
+						console.log("北京市 "+document.getElementById("selB").value+"区");
+				        break;
+				     case "tianjin":
+						console.log("天津市 "+document.getElementById("selT").value+"区");
+				        break;
+				     case "hebei":
+						console.log("河北省 "+document.getElementById("selH").value+"市");
+						break;
+					default:				        
+					} 
+			}
+		</script>
+		
+	</body>
+</html>
+	

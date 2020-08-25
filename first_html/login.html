@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<hl>用户登录</hl>
+		<div id = 'loginDiv'>
+			<form>
+				<table>
+					<tr>
+						<td>用户名:</td>
+						<td><input type = 'text' name = 'username' id = 'username' value = ""></td>		
+						<td>密码:</td>
+						<td><input type = 'text' name = 'password' id = 'password' value = ""></td>					
+					</tr>
+				</table>				
+			</form>
+			<br / >
+			<input type="button" value='登录' onclick="login()"/>
+		</div>
+		<script>
+			function login(){
+				
+				var user = {
+					username,
+					password 
+				}
+				user.username = document.getElementById('username').value;
+				user.password = document.getElementById('password').value;
+				user = JSON.stringify(user);
+				localStorage.setItem("user", user);
+				/*
+				var username; 
+				var password;
+				username = document.getElementById('username').value;
+				password = document.getElementById('password').value;
+				window.localStorage.setItem('username',username);
+				window.localStorage.setItem('password',password);*/
+				window.location.href='logined.html';
+			}
+		</script>
+	</body>
+</html>
