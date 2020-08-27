@@ -31,11 +31,12 @@
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		"list": [{
-			"pagePath": "pages/index/index",
-			"iconPath": "static/image/dm_home.png",
-			"selectedIconPath": "static/image/dm_home_selected.png",
-			"text": "首页"
-		}, {
+				"pagePath": "pages/home/home",
+				"iconPath": "static/image/dm_home.png",
+				"selectedIconPath": "static/image/dm_home_selected.png",
+				"text": "首页"
+		}, 
+		{
 			"pagePath": "pages/order/order",
 			"iconPath": "static/image/dm_cart.png",
 			"selectedIconPath": "static/image/dm_cart_selected.png",

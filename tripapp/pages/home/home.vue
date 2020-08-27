@@ -16,10 +16,10 @@
 				city: '上海'
 			}
 		},
-		onLoad: function(option) { //option为object类型，会序列化上个页面传递的参数
+		/*onLoad: function(option) { //option为object类型，会序列化上个页面传递的参数
 			console.log(option.city); //打印出上个页面传递的参数。
 			this.city = option.city;
-		},
+		},*/
 		methods: {
 
 		}
