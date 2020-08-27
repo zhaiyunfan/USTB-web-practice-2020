@@ -59,14 +59,14 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "去哪儿演示",
-		"navigationBarBackgroundColor": "#3cc51f",
+		"navigationBarBackgroundColor": "#4CD964",
 		"backgroundColor": "#F8F8F8",
 		"renderingMode": "seperated", // 仅微信小程序，webrtc 无法正常时尝试强制关闭同层渲染
 		"pageOrientation": "portrait" //横屏配置，全局屏幕旋转设置(仅 APP/微信/QQ小程序)，支持 auto / portrait / landscape
 	},
 	"tabBar": {
 		"color": "#7A7E83",
-		"selectedColor": "#3cc51f",
+		"selectedColor": "#4CD964",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		"height": "50px",

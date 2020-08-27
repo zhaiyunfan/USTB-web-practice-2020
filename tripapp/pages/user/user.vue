@@ -25,10 +25,9 @@
 				<text class="list-text">帮助与反馈</text>
 				<text class="navigat-arrow">&#xe65e;</text>
 			</view>
-			<view class="center-list-item">
+			<view class="center-list-item" @tap="initApp">
 				<text class="list-icon">&#xe65f;</text>
-				<text class="list-text">服务条款及隐私</text>
-				<text class="navigat-arrow">&#xe65e;</text>
+				<text class="list-text">系统初始化</text>
 			</view>
 		</view>
 		<view class="center-list">
@@ -54,7 +53,35 @@
 			goLogin() {
 				if (!this.login) {
 					console.log("点击前往登录")
+					uni.navigateTo({
+						url:'../login/login'
+					})
 				}
+			},
+			initApp:function(){
+				uni.showModal({
+					title: '确定要初始化系统吗?',
+					content: '初始化系统会清除所有缓存数据并且重启？',
+					success: function(res) {
+						if (res.confirm) {
+							console.log('用户点击确定');
+							// 清除缓存
+							uni.clearStorage();
+							// 一秒后重启
+							uni.showToast({
+								icon: 'none',
+								duration: 3000,
+								title: '清除成功1秒后重启'
+							});
+							setTimeout(function() {
+								uni.hideToast();
+								plus.runtime.restart();
+							}, 1000);
+						} else if (res.cancel) {
+							console.log('用户点击取消');
+						}
+					}
+				});
 			}
 		}
 	}

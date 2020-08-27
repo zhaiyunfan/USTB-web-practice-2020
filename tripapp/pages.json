@@ -2,7 +2,10 @@
 	"pages": [{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-ui基础项目"
+				"navigationBarTitleText": "引导页,",
+				"app-plus": {
+					"titleNView": false //不显示状态栏
+				}
 			}
 		},
 		{
@@ -22,12 +25,28 @@
 			"style": {
 				"navigationBarTitleText": "用户中心"
 			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "用户登录"
+			}
+		}, {
+			"path": "pages/login/forget",
+			"style": {
+				"navigationBarTitleText": "忘记密码"
+			}
+		}, {
+			"path": "pages/login/register",
+			"style": {
+				"navigationBarTitleText": "用户注册"
+			}
 		}
 
 	],
 	"tabBar": {
 		"color": "#7A7E83",
-		"selectedColor": "#3cc51f",
+		"selectedColor": "#4CD964",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		"list": [{
@@ -35,22 +54,21 @@
 				"iconPath": "static/image/dm_home.png",
 				"selectedIconPath": "static/image/dm_home_selected.png",
 				"text": "首页"
-		}, 
-		{
-			"pagePath": "pages/order/order",
-			"iconPath": "static/image/dm_cart.png",
-			"selectedIconPath": "static/image/dm_cart_selected.png",
-			"text": "订单"
-		},
-		{
-			"pagePath": "pages/user/user",
-			"iconPath": "static/image/dm_my.png",
-			"selectedIconPath": "static/image/dm_my_selected.png",
-			"text": "用户"
-		}
+			}, {
+				"pagePath": "pages/order/order",
+				"iconPath": "static/image/dm_cart.png",
+				"selectedIconPath": "static/image/dm_cart_selected.png",
+				"text": "订单"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"iconPath": "static/image/dm_my.png",
+				"selectedIconPath": "static/image/dm_my_selected.png",
+				"text": "用户"
+			}
 		]
 	},
-	
+
 	"condition": { //模式配置，仅开发期间生效
 		"current": 0, //当前激活的模式（list 的索引项）
 		"list": [{
@@ -62,7 +80,7 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#007AFF",
+		"navigationBarBackgroundColor": "#4CD964",
 		"backgroundColor": "#FFFFFF"
 	}
 }
