@@ -13,10 +13,9 @@
 				<text class="list-text">帐号管理</text>
 				<text class="navigat-arrow">&#xe65e;</text>
 			</view>
-			<view class="center-list-item">
+			<view class="center-list-item" @tap="goToSendMsgCase">
 				<text class="list-icon">&#xe639;</text>
-				<text class="list-text">新消息通知</text>
-				<text class="navigat-arrow">&#xe65e;</text>
+				<text class="list-text">手机发送验证码案例</text>				
 			</view>
 		</view>
 		<view class="center-list">
@@ -58,6 +57,13 @@
 					})
 				}
 			},
+			goToSendMsgCase(){
+				//页面的跳转。
+				uni.navigateTo({
+					url:'../case/msg'  //跳转到用户登录页面
+				})
+			},
+			
 			initApp:function(){
 				uni.showModal({
 					title: '确定要初始化系统吗?',

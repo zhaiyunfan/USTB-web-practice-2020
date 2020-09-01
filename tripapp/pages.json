@@ -41,6 +41,12 @@
 			"style": {
 				"navigationBarTitleText": "用户注册"
 			}
+		},
+		{
+			"path": "pages/case/msg",
+			"style": {
+				"navigationBarTitleText": "发送验证码案例"
+			}
 		}
 
 	],
