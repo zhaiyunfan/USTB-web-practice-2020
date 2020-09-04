@@ -2025,7 +2025,7 @@ var render = function() {
                 model: {
                   value: _vm._$g(5, "v-model"),
                   callback: function() {},
-                  expression: "phoneData"
+                  expression: "identify"
                 }
               }),
               _c("wInput", {
@@ -2033,7 +2033,7 @@ var render = function() {
                 model: {
                   value: _vm._$g(6, "v-model"),
                   callback: function() {},
-                  expression: "passData"
+                  expression: "password"
                 }
               })
             ],
@@ -3071,7 +3071,7 @@ var render = function() {
                 model: {
                   value: _vm._$g(5, "v-model"),
                   callback: function() {},
-                  expression: "phoneData"
+                  expression: "user.mobile"
                 }
               }),
               _c("wInput", {
@@ -3079,7 +3079,7 @@ var render = function() {
                 model: {
                   value: _vm._$g(6, "v-model"),
                   callback: function() {},
-                  expression: "passData"
+                  expression: "user.password"
                 }
               }),
               _c("wInput", {
