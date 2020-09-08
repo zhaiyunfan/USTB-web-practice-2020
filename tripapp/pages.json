@@ -60,11 +60,24 @@
 				"iconPath": "static/image/dm_home.png",
 				"selectedIconPath": "static/image/dm_home_selected.png",
 				"text": "首页"
-			}, {
+			}, 
+			{
+				"pagePath": "pages/rank/rank",
+				"iconPath": "static/image/dm_my.png",
+				"selectedIconPath": "static/image/dm_my_selected.png",
+				"text": "排行"
+			},
+			{
 				"pagePath": "pages/order/order",
 				"iconPath": "static/image/dm_cart.png",
 				"selectedIconPath": "static/image/dm_cart_selected.png",
 				"text": "订单"
+			},
+			{
+				"pagePath": "pages/transport/transport",
+				"iconPath": "static/image/dm_my.png",
+				"selectedIconPath": "static/image/dm_my_selected.png",
+				"text": "出行"
 			},
 			{
 				"pagePath": "pages/user/user",
