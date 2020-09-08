@@ -20,11 +20,11 @@ public class UsersServiceTest {
     @Test
     public void testReg(){
         Users user = new Users();
-        user.setUsername("宋小宝");
+        user.setUsername("小沈阳");
         user.setPassword("123456");
         user.setBirthday("1999-10-10");
         user.setRegDate("2020-09-01");
-        user.setGender("男");
+        user.setGender("女");
         user.setStatus(1);
 
         user= usersService.reg(user);
@@ -37,11 +37,20 @@ public class UsersServiceTest {
 
     @Test
     public void testLogin(){
-        Users loginUser = usersService.login("宋小宝","654321");
+        Users loginUser = usersService.login("宋小宝","123456");
         if(loginUser!=null){
             System.out.println("登录成功！");
         }else{
             System.out.println("登录失败!");
         }
+    }
+
+    @Test
+    public void testUpdateUser(){
+        //把'李白'用户查询出来
+        Users user = usersService.queryUserByUid(29);
+        user.setPassword("123456");
+        user = usersService.updateUser(user);
+        System.out.println(user);
     }
 }

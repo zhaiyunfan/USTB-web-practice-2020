@@ -20,6 +20,8 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //使用默认的主键生成策略 auto_increment
     @TableId(value = "uid",type = IdType.AUTO)
     private int uid; //用户编号
+    private String mobile; //手机号
+    private String email; //电子邮箱
     private String username; //用户名
     private String password; //密码
     private String birthday; //生日
