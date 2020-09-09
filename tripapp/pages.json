@@ -53,8 +53,12 @@
 			"style": {
 				"navigationBarTitleText": "用户注册"
 			}
-		},
-		{
+		},{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "商品详情"
+			}
+		},{
 			"path": "pages/case/msg",
 			"style": {
 				"navigationBarTitleText": "发送验证码案例"
