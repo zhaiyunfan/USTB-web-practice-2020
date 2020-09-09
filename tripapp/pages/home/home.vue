@@ -87,26 +87,24 @@
 				title: 'product-list',
 				productList: [],
 				renderImage: false,
-				banner: [{
-						image: '/static/spots/yiheyuan001.jpg',
+				banner: [
+					{
+						image: '/static/spots/gugong001.jpg'
 					},
 					{
 						image: '/static/spots/tiantan001.jpg',
 					},
 					{
-						image: '/static/spots/gugong001.jpg'
+						image: '/static/spots/yiheyuan001.jpg',
+					},
+					{
+						image: '/static/spots/changcheng001.jpg'
 					},
 					{
 						image: '/static/spots/shaolin001.jpg'
 					},
 					{
-						image: '/static/spots/shaolin.jpg'
-					},
-					{
 						image: '/static/spots/huangshan001.jpg'
-					},
-					{
-						image: '/static/spots/changcheng001.jpg'
 					}
 				],
 				listData: [],

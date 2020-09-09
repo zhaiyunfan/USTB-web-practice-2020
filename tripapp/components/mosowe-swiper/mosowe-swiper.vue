@@ -24,7 +24,7 @@
 					v-for="(item,index) of lists" 
 					:key="index"
 					:class="canPyramid && active !== index ? 'swiper-pyramid' : canPyramid && active === index ? 'swiper-active' : ''"
-					@click="bannerClick({item,index})"
+					@click="bannerClick(index)"
 					>
 					<!-- 仅图片展示 -->
 					<image :src="imageKey ? item[imageKey] : item" class="image" v-if="swiperType === 'image'"></image>
@@ -221,8 +221,8 @@ export default {
 			this.$emit('change', e.detail.current);
 		},
 		// banner点击时
-		bannerClick (item) {
-			console.log(item);
+		bannerClick:function (index) {
+			/*console.log(item);
 			if (this.swiperType === 'image' && this.previewImage) { // 纯图片模式下，开启预览模式
 				let urls = [];
 				if (this.imageKey) {
@@ -238,7 +238,12 @@ export default {
 					urls: urls
 				});				
 			}
-			this.$emit('bclick', item);
+			this.$emit('bclick', item);*/
+			uni.navigateTo({
+				//url: "/pages/detail/detail?detailDate=" + encodeURIComponent(JSON.stringify(detail))
+			
+				url: ("/pages/detail/detail?id="+index)
+			})
 		},
 		
   }

@@ -2914,7 +2914,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../HBuilderX.2.8.8.20200820.full/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 13);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* 头条小程序组件内不能引入字体 */\nbody {\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: column;\n\t        flex-direction: column;\n\tbox-sizing: border-box;\n\tbackground-color: #efeff4;\n\tmin-height: 100%;\n\theight: auto;\n}\nuni-view {\n\tfont-size: 14px;\n\tline-height: inherit;\n}\n.example {\n\tpadding: 0 15px 15px;\n}\n.example-info {\n\tpadding: 15px;\n\tcolor: #3b4144;\n\tbackground: #ffffff;\n}\n.example-body {\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-flex-wrap: wrap;\n\t        flex-wrap: wrap;\n\t-webkit-box-pack: center;\n\t-webkit-justify-content: center;\n\t        justify-content: center;\n\tpadding: 0;\n\tfont-size: 14px;\n\tbackground-color: #ffffff;\n}\n.example {\n\tpadding: 0 15px;\n}\n.example-info {\n\n\tdisplay: block;\n\n\tpadding: 15px;\n\tcolor: #3b4144;\n\tbackground-color: #ffffff;\n\tfont-size: 14px;\n\tline-height: 20px;\n}\n.example-info-text {\n\tfont-size: 14px;\n\tline-height: 20px;\n\tcolor: #3b4144;\n}\n.example-body {\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: column;\n\t        flex-direction: column;\n\tpadding: 15px;\n\tbackground-color: #ffffff;\n}\n.word-btn-white {\n\tfont-size: 18px;\n\tcolor: #FFFFFF;\n}\n.word-btn {\n\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n\t-webkit-box-pack: center;\n\t-webkit-justify-content: center;\n\t        justify-content: center;\n\tborder-radius: 6px;\n\theight: 48px;\n\tmargin: 15px;\n\tbackground-color: #007AFF;\n}\n.word-btn--hover {\n\tbackground-color: #4ca2ff;\n}\n.uni-nav-bar-text {\n\tfont-size: 28rpx;\n}\n.city {\n\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n\t-webkit-box-pack: start;\n\t-webkit-justify-content: flex-start;\n\t        justify-content: flex-start;\n\twidth: 120rpx;\n\n\tmargin-left: 0px;\n}\n.input-view {\n\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\twidth: 480rpx;\n\t-webkit-box-flex: 1;\n\t-webkit-flex: 1;\n\t        flex: 1;\n\tbackground-color: #f8f8f8;\n\theight: 30px;\n\tborder-radius: 15px;\n\tpadding: 0 15px;\n\t-webkit-flex-wrap: nowrap;\n\t        flex-wrap: nowrap;\n\tmargin: 7px 0;\n\tline-height: 30px;\n}\n.input-uni-icon {\n\tline-height: 30px;\n}\n.nav-bar-input {\n\theight: 30px;\n\tline-height: 30px;\n\n\n\n\tpadding: 0 5px;\n\tfont-size: 28rpx;\n\tbackground-color: #f8f8f8;\n}\n.example-body {\n\tpadding: 0;\n}\nuni-view {\n\tfont-size: 28upx;\n}\n.uni-product-list {\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\twidth: 100%;\n\t-webkit-flex-wrap: wrap;\n\t        flex-wrap: wrap;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n}\n.uni-product {\n\tpadding: 20upx;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: column;\n\t        flex-direction: column;\n}\n.image-view {\n\theight: 330upx;\n\twidth: 330upx;\n\tmargin: 12upx 0;\n}\n.uni-product-image {\n\theight: 330upx;\n\twidth: 330upx;\n}\n.uni-product-title {\n\twidth: 300upx;\n\tword-break: break-all;\n\tdisplay: -webkit-box;\n\toverflow: hidden;\n\tline-height: 1.5;\n\ttext-overflow: ellipsis;\n\t-webkit-box-orient: vertical;\n\t-webkit-line-clamp: 2;\n}\n.uni-product-price {\n\tmargin-top: 10upx;\n\tfont-size: 28upx;\n\tline-height: 1.5;\n\tposition: relative;\n}\n.uni-product-price-original {\n\tcolor: #e80080;\n}\n.uni-product-price-favour {\n\tcolor: #888888;\n\ttext-decoration: line-through;\n\tmargin-left: 10upx;\n}\n.uni-product-tip {\n\tposition: absolute;\n\tright: 10upx;\n\tbackground-color: #ff3333;\n\tcolor: #ffffff;\n\tpadding: 0 10upx;\n\tborder-radius: 5upx;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* 头条小程序组件内不能引入字体 */\nbody {\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: column;\n\t        flex-direction: column;\n\tbox-sizing: border-box;\n\tbackground-color: #efeff4;\n\tmin-height: 100%;\n\theight: auto;\n}\nuni-view {\n\tfont-size: 14px;\n\tline-height: inherit;\n}\n.example {\n\tpadding: 0 15px 15px;\n}\n.example-info {\n\tpadding: 15px;\n\tcolor: #3b4144;\n\tbackground: #ffffff;\n}\n.example-body {\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-flex-wrap: wrap;\n\t        flex-wrap: wrap;\n\t-webkit-box-pack: center;\n\t-webkit-justify-content: center;\n\t        justify-content: center;\n\tpadding: 0;\n\tfont-size: 14px;\n\tbackground-color: #ffffff;\n}\n.example {\n\tpadding: 0 15px;\n}\n.example-info {\n\n\tdisplay: block;\n\n\tpadding: 15px;\n\tcolor: #3b4144;\n\tbackground-color: #ffffff;\n\tfont-size: 14px;\n\tline-height: 20px;\n}\n.example-info-text {\n\tfont-size: 14px;\n\tline-height: 20px;\n\tcolor: #3b4144;\n}\n.example-body {\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: column;\n\t        flex-direction: column;\n\tpadding: 15px;\n\tbackground-color: #ffffff;\n}\n.word-btn-white {\n\tfont-size: 18px;\n\tcolor: #FFFFFF;\n}\n.word-btn {\n\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n\t-webkit-box-pack: center;\n\t-webkit-justify-content: center;\n\t        justify-content: center;\n\tborder-radius: 6px;\n\theight: 48px;\n\tmargin: 15px;\n\tbackground-color: #007AFF;\n}\n.word-btn--hover {\n\tbackground-color: #4ca2ff;\n}\n.uni-nav-bar-text {\n\tfont-size: 28rpx;\n}\n.city {\n\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\t-webkit-box-align: center;\n\t-webkit-align-items: center;\n\t        align-items: center;\n\t-webkit-box-pack: start;\n\t-webkit-justify-content: flex-start;\n\t        justify-content: flex-start;\n\twidth: 120rpx;\n\n\tmargin-left: 0px;\n}\n.input-view {\n\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n\twidth: 480rpx;\n\t-webkit-box-flex: 1;\n\t-webkit-flex: 1;\n\t        flex: 1;\n\tbackground-color: #f8f8f8;\n\theight: 30px;\n\tborder-radius: 15px;\n\tpadding: 0 15px;\n\t-webkit-flex-wrap: nowrap;\n\t        flex-wrap: nowrap;\n\tmargin: 7px 0;\n\tline-height: 30px;\n}\n.input-uni-icon {\n\tline-height: 30px;\n}\n.nav-bar-input {\n\theight: 30px;\n\tline-height: 30px;\n\n\n\n\tpadding: 0 5px;\n\tfont-size: 28rpx;\n\tbackground-color: #f8f8f8;\n}\n.example-body {\n\tpadding: 0;\n}\nuni-view {\n\tfont-size: 28upx;\n}\n.uni-product-list {\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\twidth: 100%;\n\t-webkit-flex-wrap: wrap;\n\t        flex-wrap: wrap;\n\t-webkit-box-orient: horizontal;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: row;\n\t        flex-direction: row;\n}\n.uni-product {\n\tpadding: 20upx;\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: flex;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t-webkit-flex-direction: column;\n\t        flex-direction: column;\n}\n.image-view {\n\theight: 330upx;\n\twidth: 330upx;\n\tmargin: 12upx 0;\n}\n.uni-product-image {\n\theight: 330upx;\n\twidth: 330upx;\n}\n.uni-product-title {\n\twidth: 300upx;\n\tword-break: break-all;\n\tdisplay: -webkit-box;\n\toverflow: hidden;\n\tline-height: 1.5;\n\ttext-overflow: ellipsis;\n\t-webkit-box-orient: vertical;\n\t-webkit-line-clamp: 2;\n}\n.uni-product-price {\n\tmargin-top: 10upx;\n\tfont-size: 28upx;\n\tline-height: 1.5;\n\tposition: relative;\n}\n.uni-product-price-original {\n\tcolor: #e80080;\n}\n.uni-product-price-favour {\n\tcolor: #888888;\n\ttext-decoration: line-through;\n\tmargin-left: 10upx;\n}\n.uni-product-tip {\n\tposition: absolute;\n\tright: 10upx;\n\tbackground-color: #ff3333;\n\tcolor: #ffffff;\n\tpadding: 0 10upx;\n\tborder-radius: 5upx;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -5092,150 +5092,9 @@ var render = function() {
           _c("hr", { attrs: { _i: 11 } }),
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(12, "sc"), attrs: { _i: 12 } },
-            [
-              _c(
-                "v-uni-view",
-                { staticClass: _vm._$g(13, "sc"), attrs: { _i: 13 } },
-                [_vm._v("姓名")]
-              ),
-              _c(
-                "v-uni-view",
-                { staticClass: _vm._$g(14, "sc"), attrs: { _i: 14 } },
-                [
-                  _c("v-uni-input", {
-                    staticClass: _vm._$g(15, "sc"),
-                    attrs: {
-                      value: _vm._$g(15, "a-value"),
-                      "data-name": "name",
-                      "placeholder-class": "plaClass",
-                      placeholder: "请输入姓名",
-                      _i: 15
-                    },
-                    on: {
-                      input: function($event) {
-                        return _vm.$handleViewEvent($event)
-                      }
-                    }
-                  })
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _c(
-            "v-uni-view",
-            { staticClass: _vm._$g(16, "sc"), attrs: { _i: 16 } },
-            [
-              _c(
-                "v-uni-view",
-                { staticClass: _vm._$g(17, "sc"), attrs: { _i: 17 } },
-                [_vm._v("手机号")]
-              ),
-              _c(
-                "v-uni-view",
-                { staticClass: _vm._$g(18, "sc"), attrs: { _i: 18 } },
-                [
-                  _c("v-uni-input", {
-                    staticClass: _vm._$g(19, "sc"),
-                    attrs: {
-                      value: _vm._$g(19, "a-value"),
-                      "data-name": "phone",
-                      "placeholder-class": "plaClass",
-                      placeholder: "请输入手机号",
-                      _i: 19
-                    },
-                    on: {
-                      input: function($event) {
-                        return _vm.$handleViewEvent($event)
-                      }
-                    }
-                  })
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _c(
-            "v-uni-view",
-            { staticClass: _vm._$g(20, "sc"), attrs: { _i: 20 } },
-            [
-              _c(
-                "v-uni-view",
-                { staticClass: _vm._$g(21, "sc"), attrs: { _i: 21 } },
-                [_vm._v("身份证")]
-              ),
-              _c(
-                "v-uni-view",
-                { staticClass: _vm._$g(22, "sc"), attrs: { _i: 22 } },
-                [
-                  _c("v-uni-input", {
-                    staticClass: _vm._$g(23, "sc"),
-                    attrs: {
-                      value: _vm._$g(23, "a-value"),
-                      "data-name": "id",
-                      "placeholder-class": "plaClass",
-                      placeholder: "请输入身份证",
-                      _i: 23
-                    },
-                    on: {
-                      input: function($event) {
-                        return _vm.$handleViewEvent($event)
-                      }
-                    }
-                  })
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _c(
-            "v-uni-view",
-            { staticClass: _vm._$g(24, "sc"), attrs: { _i: 24 } },
-            [
-              _c(
-                "v-uni-view",
-                { staticClass: _vm._$g(25, "sc"), attrs: { _i: 25 } },
-                [_vm._v("备注")]
-              ),
-              _c(
-                "v-uni-view",
-                { staticClass: _vm._$g(26, "sc"), attrs: { _i: 26 } },
-                [
-                  _c("v-uni-input", {
-                    staticClass: _vm._$g(27, "sc"),
-                    attrs: {
-                      value: _vm._$g(27, "a-value"),
-                      "data-name": "remarks",
-                      "placeholder-class": "plaClass",
-                      placeholder: "备注",
-                      _i: 27
-                    },
-                    on: {
-                      input: function($event) {
-                        return _vm.$handleViewEvent($event)
-                      }
-                    }
-                  }),
-                  _c(
-                    "v-uni-view",
-                    { staticClass: _vm._$g(28, "sc"), attrs: { _i: 28 } },
-                    [_vm._v("选填")]
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _c(
-            "v-uni-view",
             {
-              staticClass: _vm._$g(29, "sc"),
-              attrs: { _i: 29 },
+              staticClass: _vm._$g(12, "sc"),
+              attrs: { _i: 12 },
               on: {
                 click: function($event) {
                   return _vm.$handleViewEvent($event)

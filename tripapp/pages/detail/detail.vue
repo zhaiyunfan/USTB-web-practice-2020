@@ -17,10 +17,11 @@
 		<!-- #endif -->
 		<view>
 			<hr>
+			<!--
 			<view class='line'>
 				<view class='lineLeft'>姓名</view>
 				<view class="lineRight">
-					<!-- data-name为自定义参数名称,同时也会以此为参数名存入data的form中-->
+					 data-name为自定义参数名称,同时也会以此为参数名存入data的form中
 					<input class="input" @input="change" :value="form.name" data-name="name" placeholder-class="plaClass" placeholder='请输入姓名'></input>
 				</view>
 			</view>
@@ -38,7 +39,6 @@
 					<input class="input" @input="change" :value="form.id" data-name="id" placeholder-class="plaClass" placeholder='请输入身份证'></input>
 				</view>
 			</view>
-			<!--
 			<view class='line'>
 				<view class='lineLeft'>地址</view>
 				<view class="lineRight">
@@ -50,7 +50,7 @@
 					<view class="tips tri"></view>
 				</view>
 			</view>
-			-->
+			
 			<view class='line'>
 				<view class='lineLeft'>备注</view>
 				<view class="lineRight">
@@ -58,7 +58,7 @@
 					 placeholder='备注'></input>
 					<view class="tips">选填</view>
 				</view>
-			</view>
+			</view>-->
 			<view class="buttonBox" @click="submit">
 				提交订单
 			</view>
@@ -191,7 +191,7 @@
 			// 验证方法
 			toVaild(tempList) {
 				// valid(value,type)为引入的校验方法,49行可见
-				return tempList.every((item, index) => {
+				/*return tempList.every((item, index) => {
 					let isVal = this.form[item.paramName]
 					if (!isVal || !valid(isVal, item.rules)) {
 						uni.showModal({
@@ -202,12 +202,12 @@
 						return false;
 					}
 					return true;
-				})
+				})*/
 			},
 
 			// 提交
 			submit: util.throttle(function(e) {
-				console.log('提交')
+				/*console.log('提交')
 				let tempList = [{
 					paramName: 'name', //data-name和form中的参数名
 					failPass: '请输入正确的姓名', //失败的提示
@@ -222,10 +222,10 @@
 					rules: 'cardid', //valid中的规则名称
 				}]
 				if (this.toVaild(tempList)) {
+				}*/
 					uni.showToast({
 						title: '通过'
 					})
-				}
 			}, 1000), //防重点击,1s内只可点击一次
 		},
 
