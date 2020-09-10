@@ -1,39 +1,15 @@
 <template>
 	<view>
-		<uni-nav-bar :fixed="false" color="#333333" background-color="#FFFFFF" @clickRight="showUserInfo">
-			<block slot="left">
-				<view class="city" style="width: 120rpx;">
-					<!--
-					<view><text class="uni-nav-bar-text">{{ city }}</text></view>
-					<uni-icons type="arrowdown" color="#333333" size="22" />
-					-->
-					<view>
-						<view>
-							<view>
-								<picker @change="bindPickerChange" :value="positionIndex" :range="array">
-									<view class="uni-input">{{array[positionIndex]}}</view>
-								</picker>
-							</view>
-						</view>
-					</view>
-				</view>
-			</block>
-			<view class="input-view">
-				<uni-icons class="input-uni-icon" type="search" size="22" color="#666666" />
-				<input v-model="selectValue" confirm-type="search" class="nav-bar-input" type="text" placeholder="输入旅游目的地" @confirm="confirmSearch">
-			</view>
-		</uni-nav-bar>
-		<!--
-		<view class="content">
-			<space-swiper></space-swiper>
-		</view>
-		-->
-		<view class="content">
-			<mosowe-swiper :lists="banner" :touchable="false" indicator="dots" imageKey="image" previewImage pyramid
-			 pyramidMargin="90rpx" />
-		</view>
+		
+		<div class="left" style="float:left">
+			<button  @tap="priceRank(productList)">价格排行榜</button>
+		</div>
+		<div class="right" style="float:right">
+			<button type="default" @tap="favourRank(productList)">人气排行榜</button>
+		</div>
 		<view class="uni-product-list">
-			<view class="uni-product" v-for="(product,index) in productList" :key="index" v-if="positionIndex==0||product.position.indexOf(array[positionIndex])!=-1&&product.title.indexOf(selectValue)!=-1">
+			<view class="uni-product" v-for="(product,index) in productList" :key="index" v-if="product.title.indexOf(selectValue)!=-1">
+
 				<view class="image-view">
 					<image v-if="renderImage" class="uni-product-image" :src="product.image" @tap="goToDetail(index)"></image>
 				</view>
@@ -41,24 +17,11 @@
 				<view class="uni-product-price">
 					<text class="uni-product-price-favour">￥{{product.originalPrice}}</text>
 					<text class="uni-product-price-original">￥{{product.favourPrice}}</text>
-					<text class="uni-product-tip">{{product.tip}}</text>
+					<text class="uni-product-tip">{{product.tip}}</text></br>
+					<text class="uni-product-price-fav"> 被收藏{{product.favour}}次</text>
 				</view>
 			</view>
 		</view>
-		<!--<view class="uni-product-list" v-if="!initialValue">
-			<view class="uni-product" v-for="(product,index) in search(productList,selectValue)" :key="index" v-if="product.title.indexOf(selectValue)!=-1">
-			<view class="uni-product" v-for="(product,index) in productList" :key="index" v-if="product.title.indexOf(selectValue)!=-1">
-					<view class="image-view">
-						<image v-if="renderImage" class="uni-product-image" :src="product.image" @tap="goToDetail()"></image>
-					</view>
-					<view class="uni-product-title">{{product.title}}</view>
-					<view class="uni-product-price">
-						<text class="uni-product-price-favour">￥{{product.originalPrice}}</text>
-						<text class="uni-product-price-original">￥{{product.favourPrice}}</text>
-						<text class="uni-product-tip">{{product.tip}}</text>
-					</view>
-			</view>
-		</view>-->
 	</view>
 </template>
 
@@ -67,8 +30,6 @@
 	import uniIcons from '@/components/uni-icons/uni-icons.vue'
 	import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue'
 	import uniSection from '@/components/uni-section/uni-section.vue'
-	import mosoweSwiper from '@/components/mosowe-swiper/mosowe-swiper.vue'
-
 	var dateUtils = require('../../common/util.js').dateUtils;
 
 
@@ -76,19 +37,15 @@
 		components: {
 			uniIcons,
 			uniNavBar,
-			uniSection,
-			mosoweSwiper
+			uniSection
 		},
 		data() {
 			return {
-				city: '北京',
-				array: ['全部','北京', '上海', '广州', '西安', '成都', '重庆', '厦门', '安徽', '河南'],
-				positionIndex: 0,
+				index: 0,
 				title: 'product-list',
 				productList: [],
 				renderImage: false,
-				banner: [
-					{
+				banner: [{
 						image: '/static/spots/gugong001.jpg'
 					},
 					{
@@ -120,7 +77,6 @@
 			}, 300);
 		},
 		methods: {
-
 			loadData(action = 'add') {
 				const data = [{
 						image: '/static/spots/gugong001.jpg',
@@ -128,7 +84,7 @@
 						originalPrice: 120,
 						favourPrice: 80,
 						tip: '自营',
-						position:'北京'
+						favour: 11
 					},
 					{
 						image: '/static/spots/tiantan001.jpg',
@@ -136,7 +92,7 @@
 						originalPrice: 150,
 						favourPrice: 120,
 						tip: '特惠',
-						position:'北京'
+						favour: 22
 					},
 					{
 						image: '/static/spots/yiheyuan001.jpg',
@@ -144,7 +100,7 @@
 						originalPrice: 100,
 						favourPrice: 80,
 						tip: '自营',
-						position:'北京'
+						favour: 44
 					},
 					{
 						image: '/static/spots/changcheng001.jpg',
@@ -152,7 +108,7 @@
 						originalPrice: 80,
 						favourPrice: 60,
 						tip: '团购',
-						position:'北京'
+						favour: 33
 					},
 					{
 						image: '/static/spots/shaolin001.jpg',
@@ -160,7 +116,7 @@
 						originalPrice: 200,
 						favourPrice: 160,
 						tip: '团购',
-						position:'河南'
+						favour: 88
 					},
 					{
 						image: '/static/spots/huangshan001.jpg',
@@ -168,7 +124,7 @@
 						originalPrice: 480,
 						favourPrice: 400,
 						tip: '自营',
-						position:'安徽'
+						favour: 99
 					}
 				];
 
@@ -179,11 +135,12 @@
 				data.forEach(item => {
 					this.productList.push(item);
 				});
+				//this.$options.methods.priceRank(this.productList);
 			},
 
 			bindPickerChange: function(e) {
 				console.log('picker发送选择改变，携带值为', e.target.value)
-				this.positionIndex = e.target.value
+				this.index = e.target.value
 			},
 
 			onPullDownRefresh() {
@@ -225,7 +182,22 @@
 						title: '搜索成功',
 					})
 			},
+			priceRank: function(productList) {
+				return productList.sort(function(a, b) {
+					let x = a['favourPrice']
+					let y = b['favourPrice']
+					return ((x < y) ? -1 : (x > y) ? 1 : 0)
+				})
 
+			},
+			favourRank: function(productList) {
+				return productList.sort(function(a, b) {
+					let x = a['favour']
+					let y = b['favour']
+					return ((x > y) ? -1 : (x < y) ? 1 : 0)
+				})
+
+			},
 			goToDetail: function(index) {
 				/*
 				let detail = {
@@ -236,11 +208,11 @@
 					published_at: '2020-10-10',
 					title: '少林寺一日游'
 				}*/
-				console.log("tiaozhuans")
+
 				uni.navigateTo({
 					//url: "/pages/detail/detail?detailDate=" + encodeURIComponent(JSON.stringify(detail))
 
-					url: ("/pages/detail/detail?id="+index)
+					url: ("/pages/detail/detail?id=" + index)
 				})
 			}
 		},
@@ -418,6 +390,7 @@
 		padding: 20upx;
 		display: flex;
 		flex-direction: column;
+		margin-top: 10px;
 	}
 
 	.image-view {
@@ -452,7 +425,12 @@
 	.uni-product-price-original {
 		color: #e80080;
 	}
-	
+
+	.uni-product-price-fav {
+		font-size: 13px;
+		color: #e8a4ad;
+	}
+
 	.uni-product-price-favour {
 		color: #888888;
 		text-decoration: line-through;
@@ -466,5 +444,21 @@
 		color: #ffffff;
 		padding: 0 10upx;
 		border-radius: 5upx;
+	}
+	.left
+	{
+		width: 230px;
+		height: 20px;
+		margin: 0 auto;
+		margin-left: 10upx;
+		margin-bottom: auto;
+	}
+	.right
+	{
+		width: 230px;
+		height: 20px;
+		margin: 0 auto;
+		margin-right: 10upx;
+		margin-bottom: auto;
 	}
 </style>
