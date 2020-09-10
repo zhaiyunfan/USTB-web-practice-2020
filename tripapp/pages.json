@@ -59,6 +59,24 @@
 			"style": {
 				"navigationBarTitleText": "发送验证码案例"
 			}
+		},
+		{
+			"path": "pages/rank/rank",
+			"style": {
+				"navigationBarTitleText": "排行"
+			}
+		},
+		{
+			"path": "pages/transport/transport",
+			"style": {
+				"navigationBarTitleText": "出行"
+			}
+		},
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
 		}
 
 	],
