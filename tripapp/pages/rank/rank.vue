@@ -11,7 +11,7 @@
 			<view class="uni-product" v-for="(product,index) in productList" :key="index" v-if="product.title.indexOf(selectValue)!=-1">
 
 				<view class="image-view">
-					<image v-if="renderImage" class="uni-product-image" :src="product.image" @tap="goToDetail(index)"></image>
+					<image v-if="renderImage" class="uni-product-image" :src="product.image" @tap="goToDetail(product.id)"></image>
 				</view>
 				<view class="uni-product-title">{{product.title}}</view>
 				<view class="uni-product-price">
@@ -84,7 +84,8 @@
 						originalPrice: 120,
 						favourPrice: 80,
 						tip: '自营',
-						favour: 11
+						favour: 99,
+						id:0
 					},
 					{
 						image: '/static/spots/tiantan001.jpg',
@@ -92,7 +93,8 @@
 						originalPrice: 150,
 						favourPrice: 120,
 						tip: '特惠',
-						favour: 22
+						favour: 22,
+						id:1
 					},
 					{
 						image: '/static/spots/yiheyuan001.jpg',
@@ -100,7 +102,8 @@
 						originalPrice: 100,
 						favourPrice: 80,
 						tip: '自营',
-						favour: 44
+						favour: 44,
+						id:2
 					},
 					{
 						image: '/static/spots/changcheng001.jpg',
@@ -108,7 +111,8 @@
 						originalPrice: 80,
 						favourPrice: 60,
 						tip: '团购',
-						favour: 33
+						favour: 33,
+						id:3
 					},
 					{
 						image: '/static/spots/shaolin001.jpg',
@@ -116,7 +120,8 @@
 						originalPrice: 200,
 						favourPrice: 160,
 						tip: '团购',
-						favour: 88
+						favour: 88,
+						id:4
 					},
 					{
 						image: '/static/spots/huangshan001.jpg',
@@ -124,7 +129,8 @@
 						originalPrice: 480,
 						favourPrice: 400,
 						tip: '自营',
-						favour: 99
+						favour: 11,
+						id:5
 					}
 				];
 
