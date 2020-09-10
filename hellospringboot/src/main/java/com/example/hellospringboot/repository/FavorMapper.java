@@ -12,4 +12,10 @@ public interface FavorMapper extends BaseMapper<Favor> {
 
     @Select("select sid from favor where uid=#{uid}")
     public List<Integer> findAllByUid(int uid);
+
+    @Select("delete from favor where uid=#{uid} and sid=#{sid}")
+    public void deleteOneFavor(int uid, int sid);
+    
+    @Select("select * from favor where uid=#{uid} and sid=#{sid}")
+    public List<Favor> checkFavored(int uid, int sid);
 }
