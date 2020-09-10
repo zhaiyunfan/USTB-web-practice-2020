@@ -10,8 +10,8 @@
 					<view>
 						<view>
 							<view>
-								<picker @change="bindPickerChange" :value="index" :range="array">
-									<view class="uni-input">{{array[index]}}</view>
+								<picker @change="bindPickerChange" :value="positionIndex" :range="array">
+									<view class="uni-input">{{array[positionIndex]}}</view>
 								</picker>
 							</view>
 						</view>
@@ -33,7 +33,7 @@
 			 pyramidMargin="90rpx" />
 		</view>
 		<view class="uni-product-list">
-			<view class="uni-product" v-for="(product,index) in productList" :key="index" v-if="product.title.indexOf(selectValue)!=-1">
+			<view class="uni-product" v-for="(product,index) in productList" :key="index" v-if="positionIndex==0||product.position.indexOf(array[positionIndex])!=-1&&product.title.indexOf(selectValue)!=-1">
 				<view class="image-view">
 					<image v-if="renderImage" class="uni-product-image" :src="product.image" @tap="goToDetail(index)"></image>
 				</view>
@@ -82,8 +82,8 @@
 		data() {
 			return {
 				city: '北京',
-				array: ['北京', '上海', '广州', '西安', '成都', '重庆', '厦门', '黄山', '青岛'],
-				index: 0,
+				array: ['全部','北京', '上海', '广州', '西安', '成都', '重庆', '厦门', '安徽', '河南'],
+				positionIndex: 0,
 				title: 'product-list',
 				productList: [],
 				renderImage: false,
@@ -127,42 +127,48 @@
 						title: '故宫经典一日游',
 						originalPrice: 120,
 						favourPrice: 80,
-						tip: '自营'
+						tip: '自营',
+						position:'北京'
 					},
 					{
 						image: '/static/spots/tiantan001.jpg',
 						title: '北京故宫-天坛一日游',
 						originalPrice: 150,
 						favourPrice: 120,
-						tip: '特惠'
+						tip: '特惠',
+						position:'北京'
 					},
 					{
 						image: '/static/spots/yiheyuan001.jpg',
 						title: '北京颐和园一日游',
 						originalPrice: 100,
 						favourPrice: 80,
-						tip: '自营'
+						tip: '自营',
+						position:'北京'
 					},
 					{
 						image: '/static/spots/changcheng001.jpg',
 						title: '八达岭长城一日游',
 						originalPrice: 80,
 						favourPrice: 60,
-						tip: '团购'
+						tip: '团购',
+						position:'北京'
 					},
 					{
 						image: '/static/spots/shaolin001.jpg',
 						title: '少林寺一日游',
 						originalPrice: 200,
 						favourPrice: 160,
-						tip: '团购'
+						tip: '团购',
+						position:'河南'
 					},
 					{
 						image: '/static/spots/huangshan001.jpg',
 						title: '黄山经典两日游',
 						originalPrice: 480,
 						favourPrice: 400,
-						tip: '自营'
+						tip: '自营',
+						position:'安徽'
 					}
 				];
 
@@ -177,7 +183,7 @@
 
 			bindPickerChange: function(e) {
 				console.log('picker发送选择改变，携带值为', e.target.value)
-				this.index = e.target.value
+				this.positionIndex = e.target.value
 			},
 
 			onPullDownRefresh() {
