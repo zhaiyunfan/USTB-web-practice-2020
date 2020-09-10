@@ -192,7 +192,7 @@
 			
 			callLoginApi:function(){
 				uni.request({
-					url: 'https://wr3ck97y.xiaomy.net/tripdemo/users/auth',
+					url: 'http://wr3ck97y.xiaomy.net:30244/tripdemo/users/auth',
 					data:{
 						identify: this.identify,
 						password:this. password

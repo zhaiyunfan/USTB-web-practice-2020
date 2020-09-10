@@ -189,7 +189,7 @@
 			//调用用户注册接口...
 			callRegApi: function() {
 				uni.request({
-					url: 'https://wr3ck97y.xiaomy.net/tripdemo/users/',
+					url: 'http://wr3ck97y.xiaomy.net:30244/tripdemo/users/',
 					data: this.user,
 					method: 'POST',
 					header: {

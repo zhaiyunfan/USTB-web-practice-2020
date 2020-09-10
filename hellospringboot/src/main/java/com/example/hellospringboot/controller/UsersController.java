@@ -28,6 +28,7 @@ public class UsersController {
             result.put("data",null);
             result.put("msg","loginFailure");
         }
+        System.out.println(result);
         return result;
     }
 
