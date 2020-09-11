@@ -7446,7 +7446,12 @@ var render = function() {
                             "v-uni-view",
                             {
                               staticClass: _vm._$g("6-" + $30, "sc"),
-                              attrs: { _i: "6-" + $30 }
+                              attrs: { _i: "6-" + $30 },
+                              on: {
+                                click: function($event) {
+                                  return _vm.$handleViewEvent($event)
+                                }
+                              }
                             },
                             [
                               _c(

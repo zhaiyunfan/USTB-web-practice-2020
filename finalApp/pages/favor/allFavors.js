@@ -159,6 +159,15 @@ export default {
 				}
 			})
 		},
+		goToDetail: function(index) {
+			console.log("tiaozhuans")
+			index = parseInt(index) - 1;
+			uni.navigateTo({
+				//url: "/pages/detail/detail?detailDate=" + encodeURIComponent(JSON.stringify(detail))
+
+				url: ("/pages/detail/detail?id=" + index)
+			})
+		},
 		deleteOrder: function(oid) {
 			console.log(oid);
 			console.log('开始删除订单...');
@@ -239,9 +248,8 @@ export default {
 					console.log(res.data.length)
 					// 置空list
 					this.listFavors = [];
-					for (let i = 0; i < res.data.length; i++) {
-						this.listFavors[i] = this.cityList[res.data[i] - 1];
-					}
+					this.listFavors = res.data;
+
 					console.log(this.listFavors)
 					console.log(this.cityList)
 

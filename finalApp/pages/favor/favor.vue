@@ -5,7 +5,7 @@
 			<view class="orders">
 				<view v-if="loadData&&favorsLen">
 					<view v-for="favor in listFavors" class="item">
-						<view class="all_orders_5">
+						<view class="all_orders_5" @tap="goToDetail(favor.sid)">
 							<view class="all_orders_7">
 								<image v-on:click="all_orders_8_8_click(favor)" src="/static/all_orders/images/all_orders_8_8.jpg" mode="scaleToFill"
 								 border="0" class="all_orders_8"></image>
