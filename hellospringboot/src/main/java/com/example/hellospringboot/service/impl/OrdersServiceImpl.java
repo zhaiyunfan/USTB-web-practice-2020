@@ -1,6 +1,7 @@
 package com.example.hellospringboot.service.impl;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.hellospringboot.entity.Orders;
 import com.example.hellospringboot.entity.Products;
 import com.example.hellospringboot.repository.OrdersRepository;
@@ -34,51 +35,53 @@ public class OrdersServiceImpl implements OrdersService {
     }
 
     @Override
-    public boolean deleteOrder(int oid) {
-        int result = ordersRepository.deleteById(oid);
-        if (result > 0) {
-            return true;
-        } else {
-            return false;
-        }
+    public boolean deleteOrder(int uid, int oid) {
+        QueryWrapper<Orders> wrapper = new QueryWrapper<>();
+        wrapper.eq("uid", uid).eq("oid", oid);
+        int result = ordersRepository.delete(wrapper);
+        return result > 0;
     }
 
     @Override
-    public List<Orders> queryAllOrder() {
-        return ordersRepository.selectList(null);
+    public List<Orders> queryAllOrder(int uid) {
+        QueryWrapper<Orders> wrapper = new QueryWrapper<>();
+        wrapper.eq("uid", uid);
+        return ordersRepository.selectList(wrapper);
     }
 
     @Override
-    public Orders payOrder(int oid) {
-        Orders tmp_order = ordersRepository.selectById(oid);
+    public Orders payOrder(int uid, int oid) {
+        QueryWrapper<Orders> wrapper = new QueryWrapper<>();
+        wrapper.eq("uid", uid).eq("oid", oid);
+        Orders tmp_order = ordersRepository.selectOne(wrapper);
         tmp_order.setIsPaid(1);
         ordersRepository.updateById(tmp_order);
         return ordersRepository.selectById(tmp_order.getOid());
     }
 
     @Override
-    public int settle() {
+    public int settle(int uid) {
         int total = 0;
         Orders tmp = new Orders();
-        List<Orders> allOrders = ordersRepository.selectList(null);
-        for (int i = 0; i < allOrders.size(); i++) {
-            tmp = allOrders.get(i);
-            if (tmp.getIsPaid() == 0) {
-                total += tmp.getPrice();
-            }
+        QueryWrapper<Orders> wrapper = new QueryWrapper<>();
+        wrapper.eq("uid", uid);
+        List<Orders> ordersList = ordersRepository.selectList(wrapper);
+        for (Orders order : ordersList) {
+            if (order.getIsPaid() == 0)
+                total += order.getPrice();
         }
         return total;
     }
 
     @Override
-    public void allSettle() {
+    public void allSettle(int uid) {
         Orders tmp = new Orders();
-        List<Orders> allOrders = ordersRepository.selectList(null);
-        for (int i = 0; i < allOrders.size(); i++) {
-            tmp = allOrders.get(i);
-            if (tmp.getIsPaid() == 0) {
-                payOrder(tmp.getOid());
-            }
+        QueryWrapper<Orders> wrapper = new QueryWrapper<>();
+        wrapper.eq("uid", uid);
+        List<Orders> ordersList = ordersRepository.selectList(wrapper);
+        for (Orders orders : ordersList) {
+            if (orders.getIsPaid() == 0)
+                payOrder(uid, orders.getOid());
         }
     }
 

@@ -79,6 +79,9 @@
 		},
 		onPullDownRefresh() {
 			this.getTransportsList();
+			setTimeout(function() {
+				uni.stopPullDownRefresh()
+			}, 1000)
 		},
 		onShow() {
 			uni.request({

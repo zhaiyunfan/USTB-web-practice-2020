@@ -45,7 +45,7 @@ export default {
 		uni.request({
 			url: 'http://hkkiack8.xiaomy.net:32771/tripapp/orders/data',
 			data: {
-
+				uid: getApp().globalData.user.uid
 			},
 			method: 'GET',
 			success: (res) => {
@@ -58,7 +58,7 @@ export default {
 		uni.request({
 			url: 'http://hkkiack8.xiaomy.net:32771/tripapp/orders/total',
 			data: {
-
+				uid: getApp().globalData.user.uid
 			},
 			method: 'GET',
 			success: (res) => {
@@ -73,10 +73,21 @@ export default {
 	},
 	methods: {
 		allSettle: function() {
+			if (this.total <= 0) {
+				uni.showToast({
+					icon: 'none',
+					position: 'bottom',
+					title: '暂无待支付订单哦~'
+				})
+				return false;
+			}
 			uni.request({
 				url: 'http://hkkiack8.xiaomy.net:32771/tripapp/orders/allSettle',
 				data: {
-
+					uid: getApp().globalData.user.uid
+				},
+				header: {
+					"Content-Type": "application/x-www-form-urlencoded"
 				},
 				method: 'PUT',
 				success: (res) => {
@@ -95,7 +106,10 @@ export default {
 			uni.request({
 				url: 'http://hkkiack8.xiaomy.net:32771/tripapp/orders/pay/' + oid,
 				data: {
-
+					uid: getApp().globalData.user.uid,
+				},
+				header: {
+					"Content-Type": "application/x-www-form-urlencoded"
 				},
 				method: 'PUT',
 				success: (res) => {
@@ -115,7 +129,10 @@ export default {
 			uni.request({
 				url: 'http://hkkiack8.xiaomy.net:32771/tripapp/orders/' + oid,
 				data: {
-
+					uid: getApp().globalData.user.uid
+				},
+				header: {
+					"Content-Type": "application/x-www-form-urlencoded"
 				},
 				method: 'DELETE',
 				success: (res) => {
@@ -175,7 +192,7 @@ export default {
 			uni.request({
 				url: url,
 				data: {
-
+					uid: getApp().globalData.user.uid
 				},
 				method: 'GET',
 				success: (res) => {
@@ -208,7 +225,7 @@ export default {
 			uni.request({
 				url: 'http://hkkiack8.xiaomy.net:32771/tripapp/orders/total',
 				data: {
-			
+					uid: getApp().globalData.user.uid
 				},
 				method: 'GET',
 				success: (res) => {

@@ -40,9 +40,9 @@ public class OrdersController {
 
     @DeleteMapping("/{oid}")
     @ResponseBody
-    public Map<String, Object> deleteOrder(@PathVariable("oid") int oid) {
+    public Map<String, Object> deleteOrder(int uid, @PathVariable("oid") int oid) {
         Map<String, Object> result = new HashMap<String, Object>();
-        if (ordersService.deleteOrder(oid)) {
+        if (ordersService.deleteOrder(uid, oid)) {
             result.put("code", 200);
             result.put("data", null);
             result.put("msg", "deleteSuccess");
@@ -56,9 +56,9 @@ public class OrdersController {
 
     @GetMapping("data")
     @ResponseBody
-    public Map<String, Object> queryAllOrders() {
+    public Map<String, Object> queryAllOrders(int uid) {
         Map<String, Object> result = new HashMap<String, Object>();
-        List<Orders> ordersList = ordersService.queryAllOrder();
+        List<Orders> ordersList = ordersService.queryAllOrder(uid);
         if (ordersList != null) {
             result.put("code", 200);
             result.put("data", ordersList);
@@ -73,10 +73,10 @@ public class OrdersController {
 
     @PutMapping("pay/{oid}")
     @ResponseBody
-    public Map<String, Object> payOrder(@PathVariable("oid") int oid) {
+    public Map<String, Object> payOrder(int uid, @PathVariable("oid") int oid) {
         System.out.println(oid);
         Map<String, Object> result = new HashMap<String, Object>();
-        Orders order = ordersService.payOrder(oid);
+        Orders order = ordersService.payOrder(uid, oid);
         result.put("code", 200);
         result.put("data", order);
         result.put("msg", "paySuccess");
@@ -85,9 +85,9 @@ public class OrdersController {
 
     @GetMapping("total")
     @ResponseBody
-    public Map<String, Object> settle() {
+    public Map<String, Object> settle(int uid) {
         Map<String, Object> result = new HashMap<String, Object>();
-        int total = ordersService.settle();
+        int total = ordersService.settle(uid);
         result.put("code", 200);
         result.put("data", total);
         result.put("msg", "settleSuccess");
@@ -96,8 +96,8 @@ public class OrdersController {
 
     @PutMapping("allSettle")
     @ResponseBody
-    public void allSettle() {
-        ordersService.allSettle();
+    public void allSettle(int uid) {
+        ordersService.allSettle(uid);
     }
 
     @RequestMapping("check")
