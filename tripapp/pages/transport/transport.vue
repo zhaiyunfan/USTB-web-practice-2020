@@ -18,38 +18,38 @@
 			<swiper-item>
 
 				<!-- 按顺序对应第一个的内容 -->
-				<view v-for="item in transports">
-					{{item.tid}}
-					{{item.transType}}
-					{{item.transDesc}}
-					{{item.transPrice}}
+				<view v-for="item in transports" class="showTrans">
+					<!-- <label class="transItem">{{item.tid}}</label> -->
+					<label class="transItem">{{item.transType}}&nbsp;</label>
+					<label class="transItem">列次&nbsp;{{item.transDesc}}</label>
+					<br/>
+					<label class="transItem">票价&nbsp;{{item.transPrice}}</label>
 				</view>
 			</swiper-item>
 			<swiper-item>
-				<!-- 按顺序对应第二个的内容 -->
-				<view v-for="item in transports">
-					{{item.tid}}
-					{{item.transType}}
-					{{item.transDesc}}
-					{{item.transPrice}}
+				<!-- 按顺序对应第二个的内容-->
+				<view v-for="item in transports" class="showTrans">
+					<!-- {{item.tid}}
+					{{item.transType}} -->
+					<label class="transItem">列次&nbsp;{{item.transDesc}}</label>
+					<br/>
+					<label class="transItem">票价&nbsp;{{item.transPrice}}</label>
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<!-- 按顺序对应第三个的内容 -->
-				<view v-for="item in transports">
-					{{item.tid}}
-					{{item.transType}}
-					{{item.transDesc}}
-					{{item.transPrice}}
+				<view v-for="item in transports" class="showTrans">
+					<label class="transItem">列次&nbsp;{{item.transDesc}}</label>
+					<br/>
+					<label class="transItem">票价&nbsp;{{item.transPrice}}</label>
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<!-- 按顺序对应第四个的内容 -->
-				<view v-for="item in transports">
-					{{item.tid}}
-					{{item.transType}}
-					{{item.transDesc}}
-					{{item.transPrice}}
+				<view v-for="item in transports" class="showTrans">
+					<label class="transItem">列次&nbsp;{{item.transDesc}}</label>
+					<br/>
+					<label class="transItem">票价&nbsp;{{item.transPrice}}</label>
 				</view>
 			</swiper-item>
 		</swiper>
@@ -243,11 +243,17 @@
 		padding: 1rpx;
 	}
 
-	/* trans {
-		max-height: 200upx;
-		word-break: break-all;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp:3;
-	} */
+	.showTrans {
+		width: 100%;
+		height: 150rpx;
+		border-radius: 10rpx;
+		border: #4CD964 solid;
+		display: block;
+		margin: 20rpx;
+	}
+	
+	.transItem {
+		display: inline-block;
+		color: #50B7EA;
+	}
 </style>
